@@ -10,7 +10,9 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string :runtime
       t.string :genre
       t.string :plot
-      t.string :poster_url
+      t.string :image_url
+      t.string :resolution
+      t.string :file_format
       t.timestamps
     end
   end

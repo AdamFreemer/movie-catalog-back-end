@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -18,7 +18,9 @@ group :development, :test do
 end
 
 group :development do
-  gem 'awesome_print'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'pp'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   gem 'spring'

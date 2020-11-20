@@ -25,7 +25,9 @@ ActiveRecord::Schema.define(version: 2020_08_07_041352) do
     t.string "runtime"
     t.string "genre"
     t.string "plot"
-    t.string "poster_url"
+    t.string "image_url"
+    t.string "resolution"
+    t.string "file_format"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
