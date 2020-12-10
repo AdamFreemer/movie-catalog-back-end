@@ -33,7 +33,7 @@ class ImportsController < ApplicationController
     omdb_movie_data = JSON.parse(response.body)
     movie.director = omdb_movie_data['Director']
     movie.actors = omdb_movie_data['Actors']
-    movie.imdb_id = omdb_movie_data['Actors']
+    movie.imdb_id = omdb_movie_data['imdbID']
     movie.rated = omdb_movie_data['Rated']
     movie.runtime = omdb_movie_data['Runtime']
     movie.genre = omdb_movie_data['Genre']
