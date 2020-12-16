@@ -1,6 +1,7 @@
 module Api::V1
   class MoviesController < ApplicationController
     before_action :set_movie, only: [:show, :update, :destroy]
+    before_filter :cors_set_access_control_headers
 
     def index
       @movies = Movie.all
@@ -41,6 +42,13 @@ module Api::V1
 
     def json_response(object, status = :ok)
       render json: object, status: status
+    end
+
+    def cors_set_access_control_headers
+      headers['Access-Control-Allow-Origin'] = '*'
+      headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+      headers['Access-Control-Request-Method'] = '*'
+      headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'    
     end
   end
 end
