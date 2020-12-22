@@ -5,7 +5,7 @@ module Api::V1
 
     def index
       @movies = Movie.all
-      render json: object, status: status
+      json_response(@movies)
     end
 
     def create
