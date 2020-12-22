@@ -1,7 +1,7 @@
 module Api::V1
   class MoviesController < ApplicationController
     before_action :set_movie, only: [:show, :update, :destroy]
-    before_filter :cors_set_access_control_headers
+    before_action :cors_set_access_control_headers
 
     def index
       @movies = Movie.all
